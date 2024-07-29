@@ -1,0 +1,143 @@
+/* Custom css file made by JeanDoe */
+
+@charset 'utf-8';
+
+/* Import items */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/* declaration of root variables */
+
+:root{
+    /* fonts */
+    --body-font: 'Poppins', Arial, sans-serif;
+
+    /* colors */
+    --white: #fff;
+    --black: #212224;
+    --black-clr: #567;
+    --light-clr: #888;
+    --white-bg: #faf9f9;
+    --light-bg: #d1e1f1;
+}
+
+/* Initialisations of tags */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: var(--body-font);
+}
+
+
+/* bases */
+
+html{
+    font-size: 90%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 0.938rem;
+    font-weight: normal;
+    background: var(--white-bg);
+    padding: 0.5rem;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+/* resusables classes */
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Game Section starts */
+
+.game{
+    /* background: var(--light-bg); */
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width: 100%;
+}
+
+.game h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: .02rem;
+    color: var(--black);
+    text-align: center;
+}
+
+.game .input_field{
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game input{
+    padding: 1rem;
+    width: 100%;
+}
+
+.game input:disabled{
+    cursor: not-allowed;
+}
+
+.game input:focus{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+.game .btn,
+.game button{
+    padding: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: var(--black-clr);
+    font-weight: 500;
+    background: #eee;
+}
+
+.game .btn:active,
+.game button:active{
+    transform: scale(.97);
+}
+
+.game .btn:hover,
+.game button:hover{
+    background: #ccc;
+}
+
+.game .btn.active,
+.game button.active{
+    display: none;
+}
+
+.game p{
+    text-align: center;
+    color: var(--light-clr);
+}
+
+.game p:first-of-type{
+    color: var(--black-clr);
+    margin: 0.5rem 0;
+}
+
+.game p:last-of-type span{
+    color: var(--black-clr);
+}
+
+@media  (max-width: 768px) {
+    html{
+        font-size: 80%;
+    }
+}
